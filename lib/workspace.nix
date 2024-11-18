@@ -90,7 +90,7 @@ fix (self: {
       # - A function taking the generated config as an argument, and returning the augmented config
       config ? { },
     }:
-    assert isPath workspaceRoot;
+    # assert isPath workspaceRoot;
     assert isAttrs config || isFunction config;
     let
       pyproject = importTOML (workspaceRoot + "/pyproject.toml");
